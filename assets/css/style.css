@@ -1,0 +1,58 @@
+/* 
+This is the primary HTML style
+*/
+html {
+  font-size: 0.75em;
+  font-size: 75%; }
+
+/*----variables-------------*/
+.foo {
+  background: orange;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 2em; }
+  .foo p {
+    background-color: red;
+    color: blue;
+    font-size: 14px;
+    font-weight: bold; }
+  .foo.block {
+    border: 1px solid #ccc;
+    background-color: violet; }
+  .cssgradients .foo {
+    font-size: xx-large;
+    background: -webkit-linear-gradient(to left, #e01b1b 0%, #47990d 44%, #48388d 100%);
+    background: -moz-linear-gradient(to left, #e01b1b 0%, #47990d 44%, #48388d 100%);
+    background: linear-gradient(to left, #e01b1b 0%, #47990d 44%, #48388d 100%); }
+
+/*------------------------*/
+a {
+  color: white;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+/*---------*/
+.foo .awesome .class .amazing .things {
+  background: orange; }
+  .no-foo .foo .awesome .class .amazing .things {
+    background: green; }
+
+/*-------extending class ------*/
+.user-notification, .alert-winning-user {
+  border: 10px solid gray;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); }
+
+.alert-winning-user {
+  border-color: green; }
+
+/*-----@mixin---------------*/
+.alert-winning-user {
+  border: 10px solid green;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); }
+
+/*------------------------*/
+
+/*# sourceMappingURL=style.css.map */

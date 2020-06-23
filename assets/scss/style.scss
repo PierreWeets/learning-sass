@@ -1,0 +1,102 @@
+// this is a Sass silent comment. 
+// we don't need to show the world all this instructional stuff
+// sometimes notes are just for the developers
+
+/* 
+This is the primary HTML style
+*/ 
+
+html {
+    font-size: (12 / 16) * 1em;
+    font-size: (12 / 16) * 100%;
+}
+
+/*----variables-------------*/
+$border-color: #ccc;
+
+.foo {
+    background: orange;
+    font: {
+        family: arial;
+        weight: bold;
+        size: 2em;
+      }
+
+    p {
+      background-color: red;  
+      color: blue;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    
+    &.block {
+        border: 1px solid $border-color;
+        background-color: violet; 
+    }
+
+    .cssgradients & {
+        font-size: xx-large;
+        background: -webkit-linear-gradient(to left, #e01b1b 0%,#47990d 44%,#48388d 100%);
+        background: -moz-linear-gradient(to left, #e01b1b 0%,#47990d 44%,#48388d 100%);
+        background: linear-gradient(to left,  #e01b1b 0%,#47990d 44%,#48388d 100%);
+    }
+}
+/*------------------------*/
+a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+/*---------*/
+.foo {
+    .awesome {
+        .class {
+            .amazing {
+                .things {
+                    background: orange;
+                    .no-foo & {
+                        background: green;
+                        }
+                }
+            }
+        }
+    }
+}
+
+/*-------extending class ------*/
+//Our reusable variables 
+$standard-border-color: gray;
+$winning-border-color: green;
+
+//Our reusable default silent class
+%standard-dialog-box {
+  border: 10px solid $standard-border-color;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+// Semantic class used in the DOM
+.user-notification {
+  @extend %standard-dialog-box;
+}
+
+// Semantic class used in the DOM
+.alert-winning-user {
+  @extend %standard-dialog-box;
+  border-color: $winning-border-color;
+}
+
+/*-----@mixin---------------*/
+@mixin dialog-box($border-color: gray) { // gray as default value if no parameter given to the @mixin dialog-box.
+    border: 10px solid $border-color;
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  }
+  
+  .alert-winning-user {
+    @include dialog-box(green);
+  }
+/*------------------------*/
