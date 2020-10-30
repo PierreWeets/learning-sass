@@ -5,5 +5,5 @@
   * [code Css](https://github.com/PierreWeets/learning-sass/blob/master/assets/css/style.css)
 
 # Points of interest
-* to show the differences between Scss & Css file
-* to show the advantages to use a Scss file
+* to show the differences between Scss & Css files.
+* to show the advantages to use a Scss file.
